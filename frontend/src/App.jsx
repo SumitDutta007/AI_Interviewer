@@ -2,16 +2,21 @@ import { Navigate, Route } from "react-router-dom"
 import { Routes } from "react-router-dom"
 import Home from "./pages/Home"
 import Dashboard from "./pages/Dashboard"
+import ResumeScorer from "./pages/ResumeScorer"
 import { useState, useEffect } from "react"
 import { getCurrentUser } from "./apis/user.api"
 import api from "./utils/axios"
 import { getRedirectResult, onAuthStateChanged } from "firebase/auth"
 import { auth, authPersistence } from "./utils/firebase"
+import { getResume } from "./apis/resume.api"
+import { useDispatch } from "react-redux"
+import { setResume } from "./redux/resumeSlice"
 
 function App() {
 
   const [loading, setLoading] = useState(true)
   const [user, setUser] = useState(null)
+  const dispatch = useDispatch()
 
   useEffect(()=>{
     const completeRedirect = async () => {
@@ -52,6 +57,20 @@ function App() {
     return unsubscribe
   }, [])
 
+  useEffect(() => {
+    const getResumeData = async () => {
+      if (!user) {
+        dispatch(setResume(null))
+        return
+      }
+
+      const result = await getResume()
+      dispatch(setResume(result?.data ?? null))
+    }
+
+    getResumeData()
+  }, [dispatch, user])
+
   if(loading){
     return <div>Loading...</div>
   }
@@ -61,6 +80,8 @@ function App() {
       <Routes>
         <Route path="/" element={ user ? <Navigate to="/dashboard" replace/> : <Home user = {user} setUser={setUser} /> } />
         <Route path="/dashboard" element={ user ? <Dashboard user = {user} setUser = {setUser}/> : <Navigate to="/" replace/> } />
+        <Route path="/resumeScorer" element={ user ? <ResumeScorer user = {user} setUser = {setUser}/> : <Navigate to="/" replace/> } />
+
       </Routes>
     </>
   )

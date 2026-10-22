@@ -4,6 +4,7 @@ import { FiShield, FiX } from 'react-icons/fi'
 import { FcGoogle } from 'react-icons/fc'
 import { auth, authPersistence, provider } from '../utils/firebase'
 import { signInWithPopup, signInWithRedirect } from 'firebase/auth'
+import api from '../utils/axios'
 
 const LoginModel = ({ onClose, setUser }) => {
   const [isSigningIn, setIsSigningIn] = useState(false)

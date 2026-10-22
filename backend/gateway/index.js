@@ -5,6 +5,7 @@ import cors from "cors"
 import cookieParser from "cookie-parser"
 import { getCurrentUser } from "./controllers/user.controller.js"
 import { isAuth } from "./middleware/isAuth.js"
+import { proxyWithHeaders } from "./utils/proxyWithHeaders.js"
 
 dotenv.config()
 const app = express()
@@ -32,10 +33,14 @@ app.use(cookieParser())
 
 const PORT = process.env.PORT || 8000
 
-app.get("/", (req, res)=>{
+app.get("/", (res)=>{
     res.send("This is the gateway route");
 })
+
 app.use("/api/auth", proxy(process.env.AUTH_SERVICE_URL));
+app.use("/api/resume", isAuth, proxyWithHeaders(process.env.RESUME_SERVICE_URL));
+
+
 app.get("/api/me", (req, res, next) => {
     isAuth(req, res, next);
 }, getCurrentUser);
