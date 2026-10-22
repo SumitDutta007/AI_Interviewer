@@ -126,6 +126,8 @@ const Dashboard = ({ user, setUser }) => {
           <span className="dashboard-nav-label dashboard-nav-label--spaced">Build with Voxen</span>
           {services.map(({ title, icon: Icon }) => title === 'Resume scorer'
             ? <Link to="/resumeScorer" key={title} onClick={() => setSidebarOpen(false)}><Icon /> {title}</Link>
+            : title === 'Resume builder'
+              ? <Link to="/resumeBuilder" key={title} onClick={() => setSidebarOpen(false)}><Icon /> {title}</Link>
             : <a href={`#${title.toLowerCase().replace(' ', '-')}`} key={title} onClick={() => setSidebarOpen(false)}><Icon /> {title}</a>)}
         </nav>
         <div className="dashboard-sidebar-bottom">
@@ -211,7 +213,9 @@ const Dashboard = ({ user, setUser }) => {
 
             <section className="dashboard-panel services-panel">
               <div className="dashboard-panel-heading"><div><span className="dashboard-section-label">Your toolkit</span><h2>Build with Voxen</h2></div></div>
-              <div className="dashboard-service-list">{services.map(({ title, detail, icon: Icon }) => <a href={`#${title.toLowerCase().replace(' ', '-')}`} key={title}><span className="dashboard-service-icon"><Icon /></span><span><strong>{title}</strong><small>{detail}</small></span><FiChevronDown /></a>)}</div>
+              <div className="dashboard-service-list">{services.map(({ title, detail, icon: Icon }) => title === 'Resume builder'
+                ? <Link to="/resumeBuilder" key={title}><span className="dashboard-service-icon"><Icon /></span><span><strong>{title}</strong><small>{detail}</small></span><FiChevronDown /></Link>
+                : <a href={`#${title.toLowerCase().replace(' ', '-')}`} key={title}><span className="dashboard-service-icon"><Icon /></span><span><strong>{title}</strong><small>{detail}</small></span><FiChevronDown /></a>)}</div>
             </section>
           </div>
 

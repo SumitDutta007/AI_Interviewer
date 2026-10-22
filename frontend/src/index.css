@@ -2130,6 +2130,96 @@ body:has(.dashboard-page) {
     width: min(100% - 32px, 600px);
   }
 
+}
+
+/* Resume builder */
+  .resume-builder-page {
+    min-height: 100dvh;
+    padding: 32px 24px 70px;
+    color: #f1f0ec;
+    background: radial-gradient(circle at 15% 10%, #1b1b1d 0, #0a0a0b 42%), #0a0a0b;
+  }
+
+  .resume-builder-shell { width: min(100%, 980px); margin: 0 auto; }
+  .resume-builder-topbar { display: flex; align-items: center; justify-content: space-between; padding-bottom: 24px; border-bottom: 1px solid #2b2b2e; }
+  .resume-builder-back-link, .resume-builder-brand { display: inline-flex; align-items: center; gap: 8px; color: #aaa9a3; font-size: 12px; text-decoration: none; }
+  .resume-builder-back-link:hover { color: #f5f4f0; }
+  .resume-builder-brand { color: #f5f4f0; font-weight: 700; }
+  .resume-builder-brand svg { color: #c8a24a; }
+  .resume-builder-step-label { color: #c8a24a; font-size: 11px; letter-spacing: .08em; text-transform: uppercase; }
+  .resume-builder-intro { max-width: 700px; padding: 68px 0 38px; }
+  .resume-builder-intro .eyebrow { margin: 0 0 18px; color: #c8a24a; }
+  .resume-builder-intro h1 { margin: 0; color: #f1f0ec; font-size: clamp(40px, 6vw, 72px); line-height: .98; letter-spacing: -.07em; }
+  .resume-builder-intro h1 em { color: #c8a24a; font-family: Georgia, serif; font-weight: 400; }
+  .resume-builder-intro p { max-width: 520px; margin: 22px 0 0; color: #aaa9a3; font-size: 15px; line-height: 1.65; }
+  .resume-builder-progress { margin-bottom: 28px; }
+  .resume-builder-progress-track { height: 5px; overflow: hidden; background: #2b2b2e; }
+  .resume-builder-progress-track span { display: block; height: 100%; background: #c8a24a; transition: width .35s ease; }
+  .resume-builder-progress-meta { display: flex; justify-content: space-between; gap: 16px; margin-top: 10px; color: #969494; font-size: 11px; }
+  .resume-builder-progress-meta strong { color: #c8a24a; }
+  .resume-builder-card { padding: clamp(24px, 5vw, 48px); background: #171718; border: 1px solid #373737; }
+  .resume-builder-card-heading { display: flex; gap: 18px; align-items: flex-start; padding-bottom: 28px; border-bottom: 1px solid #2b2b2e; }
+  .resume-builder-card-heading > span { color: #c8a24a; font-family: Georgia, serif; font-size: 28px; }
+  .resume-builder-card-heading h2 { margin: 0; color: #f5f4f0; font-size: 28px; letter-spacing: -.04em; }
+  .resume-builder-card-heading p { margin: 8px 0 0; color: #969494; font-size: 13px; }
+  .resume-builder-form-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; padding-top: 30px; }
+  .resume-builder-field { display: grid; gap: 8px; color: #aaa9a3; font-size: 11px; }
+  .resume-builder-field span { display: flex; align-items: center; gap: 6px; color: #d8d5cd; font-weight: 600; }
+  .resume-builder-field span svg { color: #c8a24a; }
+  .resume-builder-field span b { color: #c8a24a; }
+  .resume-builder-field input, .resume-builder-field textarea { width: 100%; padding: 13px 14px; color: #f5f4f0; background: #0f0f10; border: 1px solid #39383b; border-radius: 2px; outline: none; resize: vertical; }
+  .resume-builder-field input:focus, .resume-builder-field textarea:focus { border-color: #c8a24a; box-shadow: 0 0 0 2px rgba(200, 162, 74, .12); }
+  .resume-builder-field input::placeholder, .resume-builder-field textarea::placeholder { color: #68676a; }
+  .resume-builder-field--full { grid-column: 1 / -1; }
+  .resume-builder-repeatable-list { display: grid; gap: 16px; }
+  .resume-builder-inline-field { display: grid; grid-template-columns: 1fr auto; gap: 10px; align-items: end; }
+  .resume-builder-repeatable-card { padding: 18px; background: #1f1f21; border: 1px solid #373737; }
+  .resume-builder-repeatable-card .resume-builder-form-grid { padding-top: 18px; }
+  .resume-builder-repeatable-card-header { display: flex; align-items: center; justify-content: space-between; color: #f5f4f0; font-size: 13px; text-transform: capitalize; }
+  .icon-button { display: grid; width: 32px; height: 32px; place-items: center; color: #aaa9a3; background: transparent; border: 1px solid #3b3a3e; cursor: pointer; }
+  .icon-button:hover { color: #e18c7e; border-color: #e18c7e; }
+  .resume-builder-add-button { display: inline-flex; width: fit-content; align-items: center; gap: 8px; padding: 11px 14px; color: #c8a24a; background: transparent; border: 1px solid #705c2d; cursor: pointer; font-size: 12px; }
+  .resume-builder-add-button:hover { background: #25211a; }
+  .resume-builder-navigation { display: flex; justify-content: space-between; gap: 12px; margin-top: 34px; padding-top: 24px; border-top: 1px solid #2b2b2e; }
+  .resume-builder-primary-button, .resume-builder-secondary-button { display: inline-flex; align-items: center; justify-content: center; gap: 9px; padding: 13px 18px; border: 1px solid transparent; cursor: pointer; font-size: 12px; font-weight: 600; text-decoration: none; }
+  .resume-builder-primary-button { color: #171716; background: #c8a24a; border-color: #c8a24a; }
+  .resume-builder-primary-button:hover { background: #dfbe6b; }
+  .resume-builder-primary-button:disabled, .resume-builder-secondary-button:disabled { cursor: not-allowed; opacity: .4; }
+  .resume-builder-secondary-button { color: #aaa9a3; background: transparent; border-color: #3b3a3e; }
+  .resume-builder-secondary-button:hover { color: #f5f4f0; border-color: #aaa9a3; }
+
+  .resume-builder-preview-page { background: #e9e6df; color: #171716; }
+  .resume-builder-actions { width: min(100%, 860px); display: flex; justify-content: space-between; gap: 12px; margin: 0 auto 24px; }
+  .resume-document { width: min(100%, 860px); min-height: 1100px; margin: 0 auto; padding: 58px 66px; color: #171716; background: #fff; box-shadow: 0 20px 50px rgba(0, 0, 0, .16); font-family: Georgia, "Times New Roman", serif; }
+  .resume-document-header { text-align: center; }
+  .resume-document-header h1 { margin: 0; font-size: 34px; font-variant: small-caps; font-weight: 400; letter-spacing: .08em; }
+  .resume-document-contact { display: grid; gap: 4px; margin-top: 10px; font-size: 11px; }
+  .resume-document-section { margin-top: 18px; }
+  .resume-document-section h2 { margin: 0 0 7px; padding-bottom: 3px; border-bottom: 1px solid #171716; font-size: 15px; letter-spacing: .04em; }
+  .resume-document-section p { margin: 4px 0; font-size: 11px; line-height: 1.45; white-space: pre-wrap; }
+  .resume-document-entry { margin: 10px 0; }
+  .resume-document-entry > div { display: flex; justify-content: space-between; gap: 20px; font-size: 12px; }
+  .resume-document-entry > div span { white-space: nowrap; }
+  .resume-document-entry strong { font-weight: 700; }
+
+  @media print {
+    .no-print { display: none !important; }
+    .resume-builder-preview-page { padding: 0; background: #fff; }
+    .resume-document { width: 100%; min-height: auto; padding: 34px 42px; box-shadow: none; }
+  }
+
+  @media (max-width: 700px) {
+    .resume-builder-page { padding: 20px 16px 46px; }
+    .resume-builder-topbar { align-items: flex-start; flex-wrap: wrap; gap: 14px; }
+    .resume-builder-intro { padding: 48px 0 30px; }
+    .resume-builder-form-grid { grid-template-columns: 1fr; }
+    .resume-builder-field--full { grid-column: auto; }
+    .resume-builder-navigation { flex-direction: column-reverse; }
+    .resume-builder-primary-button, .resume-builder-secondary-button { width: 100%; }
+    .resume-document { padding: 36px 24px; }
+  }
+
+@media (max-width: 800px) {
   .nav-links,
   .nav-login { display: none; }
 
@@ -2196,6 +2286,588 @@ body:has(.dashboard-page) {
   }
 
   .login-modal { padding: 40px 24px 28px; }
+}
+
+/* Resume builder home-page treatment */
+.resume-builder-page.aura-shell {
+  width: min(100% - 12px, 1440px);
+  min-height: calc(100dvh - 12px);
+  margin: 6px auto;
+  padding: 0 0 110px;
+  overflow: hidden auto;
+  border: 0;
+  border-radius: 0;
+  color: #17171b;
+  background: #fff;
+}
+
+.resume-builder-page.aura-shell::before {
+  display: none;
+}
+
+.resume-builder-page.aura-shell .resume-builder-shell {
+  width: min(100% - 80px, 980px);
+  padding-top: 28px;
+}
+
+.resume-builder-page.aura-shell .resume-builder-topbar {
+  display: none;
+}
+
+.resume-builder-page.aura-shell .aura-caption {
+  display: none;
+}
+
+.resume-builder-page.aura-shell .resume-builder-progress {
+  margin: 0 0 18px;
+  padding: 0 0 18px;
+  border-bottom: 1px solid #ededed;
+}
+
+.resume-builder-page.aura-shell .resume-builder-progress-meta {
+  margin: 0 0 8px;
+  color: #999;
+  font-size: 10px;
+  letter-spacing: .02em;
+  text-transform: uppercase;
+}
+
+.resume-builder-page.aura-shell .resume-builder-progress-meta strong {
+  color: #999;
+  font-size: 10px;
+  font-weight: 400;
+}
+
+.resume-builder-page.aura-shell .resume-builder-progress-track {
+  height: 4px;
+  background: #eeeeee;
+}
+
+.resume-builder-page.aura-shell .resume-builder-progress-track span {
+  background: #17171b;
+  transition: width .25s ease;
+}
+
+.resume-builder-page.aura-shell .resume-builder-card {
+  padding: 0;
+  color: #17171b;
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+  backdrop-filter: none;
+}
+
+.resume-builder-page.aura-shell .resume-builder-card-heading {
+  gap: 0;
+  padding: 0 0 18px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.resume-builder-page.aura-shell .resume-builder-card-heading > span {
+  display: none;
+}
+
+.resume-builder-page.aura-shell .resume-builder-card-heading h2 {
+  margin: 0;
+  color: #17171b;
+  font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: -.03em;
+}
+
+.resume-builder-page.aura-shell .resume-builder-card-heading p {
+  margin: 8px 0 0;
+  color: #989898;
+  font-size: 14px;
+}
+
+.resume-builder-page.aura-shell .resume-builder-form-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 17px;
+  padding-top: 30px;
+}
+
+.resume-builder-page.aura-shell .resume-builder-field {
+  gap: 7px;
+  color: #333;
+  font-size: 10px;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+
+.resume-builder-page.aura-shell .resume-builder-field span {
+  color: #3d3d3d;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.resume-builder-page.aura-shell .resume-builder-field input,
+.resume-builder-page.aura-shell .resume-builder-field textarea {
+  min-height: 48px;
+  padding: 13px 14px;
+  color: #17171b;
+  background: #fff;
+  border: 1px solid #bdbdbd;
+  border-radius: 9px;
+  font-size: 14px;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.resume-builder-page.aura-shell .resume-builder-field textarea {
+  min-height: 150px;
+}
+
+.resume-builder-page.aura-shell .resume-builder-field input:focus,
+.resume-builder-page.aura-shell .resume-builder-field textarea:focus {
+  border-color: #17171b;
+  box-shadow: 0 0 0 2px rgba(23, 23, 27, .08);
+}
+
+.resume-builder-page.aura-shell .resume-builder-repeatable-list {
+  padding-top: 30px;
+}
+
+.resume-builder-page.aura-shell .resume-builder-repeatable-card {
+  padding: 20px;
+  background: #fafafa;
+  border: 1px solid #e3e3e3;
+  border-radius: 10px;
+}
+
+.resume-builder-page.aura-shell .resume-builder-repeatable-card .resume-builder-form-grid {
+  padding-top: 18px;
+}
+
+.resume-builder-page.aura-shell .resume-builder-repeatable-card-header {
+  color: #17171b;
+  font-size: 13px;
+  text-transform: uppercase;
+}
+
+.resume-builder-page.aura-shell .resume-builder-navigation {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 32px;
+  padding-top: 18px;
+  border-top: 1px solid #ededed;
+}
+
+.resume-builder-page.aura-shell .resume-builder-secondary-button {
+  margin-right: auto;
+  color: #999;
+  border-color: transparent;
+}
+
+.resume-builder-page.aura-shell .resume-builder-primary-button {
+  min-width: 110px;
+  min-height: 42px;
+  color: #fff;
+  background: #17171b;
+  border: 0;
+  border-radius: 8px;
+}
+
+.resume-builder-page.aura-shell .resume-builder-primary-button:hover {
+  background: #3e3b35;
+}
+
+.resume-builder-page.aura-shell .resume-builder-add-button {
+  margin-top: 18px;
+  color: #17171b;
+  border-color: #bdbdbd;
+  border-radius: 8px;
+}
+
+.resume-builder-page.aura-shell .resume-builder-add-button:hover {
+  background: #f5f5f5;
+}
+
+@media (max-width: 800px) {
+  .resume-builder-page.aura-shell .resume-builder-shell {
+    width: calc(100% - 40px);
+    padding-top: 22px;
+  }
+
+  .resume-builder-page.aura-shell .resume-builder-navigation {
+    flex-direction: row;
+  }
+}
+
+/* Keep the reference layout while restoring the home-page visual language. */
+.resume-builder-page.aura-shell {
+  width: min(100% - 12px, 1440px);
+  min-height: calc(100dvh - 12px);
+  margin: 6px auto;
+  padding: 0 0 110px;
+  border: 1px solid #111113;
+  border-radius: 24px;
+  background:
+    radial-gradient(circle at 18% 42%, rgba(73, 164, 221, .78), transparent 42%),
+    radial-gradient(circle at 78% 34%, rgba(235, 143, 194, .68), transparent 45%),
+    linear-gradient(110deg, #79b9db 0%, #d4d9ee 48%, #e9a7ca 100%);
+}
+
+.resume-builder-page.aura-shell::before {
+  display: block;
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  opacity: .28;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.82' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.7'/%3E%3C/svg%3E");
+  mix-blend-mode: multiply;
+}
+
+.resume-builder-page.aura-shell .resume-builder-shell {
+  width: min(100% - 92px, 980px);
+  padding-top: 42px;
+}
+
+.resume-builder-preview-page.aura-shell {
+  display: block;
+  padding: 42px 24px 70px;
+  background:
+    radial-gradient(circle at 18% 42%, rgba(73, 164, 221, .78), transparent 42%),
+    radial-gradient(circle at 78% 34%, rgba(235, 143, 194, .68), transparent 45%),
+    linear-gradient(110deg, #79b9db 0%, #d4d9ee 48%, #e9a7ca 100%);
+}
+
+.resume-builder-preview-page.aura-shell .resume-builder-actions {
+  width: min(100%, 860px);
+}
+
+.resume-builder-page.aura-shell .resume-builder-progress {
+  margin: 0 0 24px;
+  padding: 0 0 18px;
+  border-bottom-color: rgba(18, 18, 22, .22);
+}
+
+.resume-builder-page.aura-shell .resume-builder-progress-meta {
+  color: rgba(24, 24, 29, .62);
+  font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+  font-size: 10px;
+  letter-spacing: .08em;
+}
+
+.resume-builder-page.aura-shell .resume-builder-progress-meta strong {
+  color: rgba(24, 24, 29, .62);
+  font-size: 10px;
+  font-weight: 400;
+}
+
+.resume-builder-page.aura-shell .resume-builder-progress-track {
+  height: 4px;
+  background: rgba(18, 18, 22, .22);
+}
+
+.resume-builder-page.aura-shell .resume-builder-progress-track span {
+  background: #17171b;
+}
+
+.resume-builder-page.aura-shell .resume-builder-card {
+  padding: 34px 42px 28px;
+  color: #17171b;
+  background: rgba(255, 255, 255, .72);
+  border: 1px solid rgba(18, 18, 22, .22);
+  border-radius: 2px;
+  box-shadow: 12px 14px 0 rgba(20, 20, 24, .14);
+  backdrop-filter: blur(4px);
+}
+
+.resume-builder-page.aura-shell .resume-builder-card-heading {
+  padding-bottom: 18px;
+  border-bottom-color: rgba(18, 18, 22, .16);
+}
+
+.resume-builder-page.aura-shell .resume-builder-card-heading h2 {
+  color: #17171b;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 32px;
+  font-weight: 400;
+  letter-spacing: -.045em;
+}
+
+.resume-builder-page.aura-shell .resume-builder-card-heading p {
+  color: rgba(24, 24, 29, .62);
+  font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+  font-size: 13px;
+}
+
+.resume-builder-page.aura-shell .resume-builder-form-grid {
+  gap: 16px;
+  padding-top: 28px;
+}
+
+.resume-builder-page.aura-shell .resume-builder-personal-step {
+  gap: 11px;
+  padding-top: 22px;
+}
+
+.resume-builder-page.aura-shell .resume-builder-personal-step .resume-builder-field {
+  gap: 4px;
+}
+
+.resume-builder-page.aura-shell .resume-builder-personal-step .resume-builder-field input {
+  min-height: 42px;
+  padding: 10px 13px;
+}
+
+.resume-builder-page.aura-shell .resume-builder-skills-step {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 14px;
+  padding-top: 28px;
+}
+
+.resume-builder-page.aura-shell .resume-builder-skills-step .resume-builder-inline-field {
+  display: flex;
+  width: auto;
+  align-items: flex-end;
+  gap: 6px;
+}
+
+.resume-builder-page.aura-shell .resume-builder-skills-step .resume-builder-field {
+  width: max-content;
+}
+
+.resume-builder-page.aura-shell .resume-builder-skills-step .resume-builder-field input {
+  width: auto;
+  min-width: 10ch;
+  max-width: 28ch;
+}
+
+.resume-builder-page.aura-shell .resume-builder-skills-step .resume-builder-add-button {
+  flex-basis: 100%;
+}
+
+.resume-builder-page.aura-shell .resume-builder-field {
+  color: rgba(24, 24, 29, .72);
+  font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+}
+
+.resume-builder-page.aura-shell .resume-builder-field span {
+  color: #17171b;
+  font-size: 10px;
+  letter-spacing: .12em;
+}
+
+.resume-builder-page.aura-shell .resume-builder-field input,
+.resume-builder-page.aura-shell .resume-builder-field textarea {
+  color: #17171b;
+  background: rgba(255, 255, 255, .82);
+  border: 1px solid rgba(18, 18, 22, .42);
+  border-radius: 2px;
+  font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+}
+
+.resume-builder-page.aura-shell .resume-builder-field input::placeholder,
+.resume-builder-page.aura-shell .resume-builder-field textarea::placeholder {
+  color: rgba(24, 24, 29, .42);
+}
+
+.resume-builder-page.aura-shell .resume-builder-navigation {
+  margin-top: 30px;
+  border-top-color: rgba(18, 18, 22, .16);
+}
+
+.resume-builder-page.aura-shell .resume-builder-primary-button {
+  color: #f8f6ef;
+  background: #17171b;
+  border-color: #17171b;
+  border-radius: 2px;
+  font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+}
+
+.resume-builder-page.aura-shell .resume-builder-secondary-button {
+  color: rgba(24, 24, 29, .62);
+  font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+}
+
+.resume-builder-page.aura-shell .resume-builder-repeatable-card {
+  background: rgba(255, 255, 255, .52);
+  border-color: rgba(18, 18, 22, .18);
+  border-radius: 2px;
+}
+
+.resume-builder-page.aura-shell .resume-builder-add-button {
+  color: #765b23;
+  border-color: rgba(113, 82, 22, .55);
+  border-radius: 2px;
+  font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+}
+
+@media (max-width: 800px) {
+  .resume-builder-page.aura-shell .resume-builder-shell {
+    width: calc(100% - 40px);
+    padding-top: 28px;
+  }
+
+  .resume-builder-page.aura-shell .resume-builder-card {
+    padding: 26px 20px 22px;
+  }
+}
+
+.resume-builder-page.aura-shell .resume-builder-progress {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 28px;
+}
+
+.resume-builder-page.aura-shell .resume-builder-progress-track {
+  background: rgba(18, 18, 22, .22);
+}
+
+.resume-builder-page.aura-shell .resume-builder-progress-track span {
+  background: #17171b;
+}
+
+.resume-builder-page.aura-shell .resume-builder-progress-meta {
+  color: rgba(24, 24, 29, .62);
+}
+
+.resume-builder-page.aura-shell .resume-builder-progress-meta strong {
+  color: #765b23;
+}
+
+.resume-builder-page.aura-shell .resume-builder-card {
+  position: relative;
+  z-index: 1;
+  color: #17171b;
+  background: rgba(255, 255, 255, .2);
+  border-color: rgba(18, 18, 22, .24);
+  backdrop-filter: blur(6px);
+  box-shadow: 14px 16px 0 rgba(20, 20, 24, .12);
+}
+
+.resume-builder-page.aura-shell .resume-builder-card-heading {
+  border-bottom-color: rgba(18, 18, 22, .22);
+}
+
+.resume-builder-page.aura-shell .resume-builder-card-heading > span,
+.resume-builder-page.aura-shell .resume-builder-card-heading h2 {
+  color: #17171b;
+}
+
+.resume-builder-page.aura-shell .resume-builder-card-heading > span {
+  color: #765b23;
+}
+
+.resume-builder-page.aura-shell .resume-builder-card-heading p,
+.resume-builder-page.aura-shell .resume-builder-field,
+.resume-builder-page.aura-shell .resume-builder-progress-meta span {
+  color: rgba(24, 24, 29, .68);
+}
+
+.resume-builder-page.aura-shell .resume-builder-field span {
+  color: #17171b;
+}
+
+.resume-builder-page.aura-shell .resume-builder-field span b {
+  color: #765b23;
+}
+
+.resume-builder-page.aura-shell .resume-builder-field input,
+.resume-builder-page.aura-shell .resume-builder-field textarea {
+  color: #17171b;
+  background: rgba(255, 255, 255, .38);
+  border-color: rgba(18, 18, 22, .3);
+}
+
+.resume-builder-page.aura-shell .resume-builder-field input::placeholder,
+.resume-builder-page.aura-shell .resume-builder-field textarea::placeholder {
+  color: rgba(24, 24, 29, .5);
+}
+
+.resume-builder-page.aura-shell .resume-builder-repeatable-card {
+  background: rgba(255, 255, 255, .22);
+  border-color: rgba(18, 18, 22, .22);
+}
+
+.resume-builder-page.aura-shell .resume-builder-repeatable-card-header {
+  color: #17171b;
+}
+
+.resume-builder-page.aura-shell .resume-builder-navigation {
+  border-top-color: rgba(18, 18, 22, .22);
+}
+
+.resume-builder-page.aura-shell .resume-builder-primary-button {
+  color: #f8f6ef;
+  background: #17171b;
+  border-color: #17171b;
+}
+
+.resume-builder-page.aura-shell .resume-builder-primary-button:hover {
+  color: #f8f6ef;
+  background: #3e3b35;
+}
+
+.resume-builder-page.aura-shell .resume-builder-secondary-button {
+  color: rgba(24, 24, 29, .75);
+  border-color: rgba(18, 18, 22, .3);
+}
+
+.resume-builder-page.aura-shell .resume-builder-secondary-button:hover {
+  color: #17171b;
+  border-color: #17171b;
+}
+
+.resume-builder-page.aura-shell .resume-builder-add-button {
+  color: #765b23;
+  border-color: rgba(113, 82, 22, .55);
+}
+
+.resume-builder-page.aura-shell .resume-builder-add-button:hover {
+  background: rgba(255, 255, 255, .25);
+}
+
+.resume-builder-page.aura-shell .resume-builder-topbar {
+  display: flex;
+  width: calc(100% - 92px);
+  margin: 0 auto;
+  align-items: center;
+  gap: 38px;
+  padding: 24px 0;
+  border-bottom: 1px solid rgba(18, 18, 22, .16);
+}
+
+.resume-builder-page.aura-shell .resume-builder-brand {
+  color: #17171b;
+  text-decoration: none;
+}
+
+.resume-builder-page.aura-shell .resume-builder-brand:hover {
+  color: #765b23;
+}
+
+.resume-builder-preview-page.aura-shell .resume-builder-preview-topbar {
+  width: calc(100% - 92px);
+  margin: 0 auto 24px;
+}
+
+@media (max-width: 800px) {
+  .resume-builder-page.aura-shell .resume-builder-shell {
+    width: calc(100% - 40px);
+  }
+
+  .resume-builder-page.aura-shell .resume-builder-intro {
+    padding: 100px 0 46px;
+  }
+
+  .resume-builder-page.aura-shell .resume-builder-brand {
+    position: static;
+    transform: none;
+  }
+
+  .resume-builder-page.aura-shell .aura-caption--top {
+    top: 78px;
+    left: 20px;
+  }
 }
 
 /* Editorial gradient canvas inspired by the supplied reference. */

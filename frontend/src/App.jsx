@@ -3,6 +3,7 @@ import { Routes } from "react-router-dom"
 import Home from "./pages/Home"
 import Dashboard from "./pages/Dashboard"
 import ResumeScorer from "./pages/ResumeScorer"
+import ResumeBuilder from "./pages/ResumeBuilder"
 import { useState, useEffect } from "react"
 import { getCurrentUser } from "./apis/user.api"
 import api from "./utils/axios"
@@ -81,6 +82,7 @@ function App() {
         <Route path="/" element={ user ? <Navigate to="/dashboard" replace/> : <Home user = {user} setUser={setUser} /> } />
         <Route path="/dashboard" element={ user ? <Dashboard user = {user} setUser = {setUser}/> : <Navigate to="/" replace/> } />
         <Route path="/resumeScorer" element={ user ? <ResumeScorer user = {user} setUser = {setUser}/> : <Navigate to="/" replace/> } />
+        <Route path="/resumeBuilder" element={ user ? <ResumeBuilder /> : <Navigate to="/" replace/> } />
 
       </Routes>
     </>
